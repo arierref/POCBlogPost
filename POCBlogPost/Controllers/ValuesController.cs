@@ -32,7 +32,7 @@ namespace POCBlogPost.Controllers
             {
                 foreach (var repo in repository)
                 {
-                    //The title shoud have only the last word.
+                    //The title shoud have only the last word
                     string title = repo.title;
                     repo.title = Rules.EditTitle(title);
 
