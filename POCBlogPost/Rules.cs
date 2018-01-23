@@ -4,14 +4,14 @@ namespace POCBlogPost
 {
     public class Rules
     {
-        internal static string EditTitle(string value)
+        public static string EditTitle(string value)
         {
             string[] titleparts = value.Split(' ');
             string newtitle = titleparts[titleparts.Length - 1];
             return newtitle;
         }
 
-        internal static string EditBody(string value)
+        public static string EditBody(string value)
         {
             string bodyfirst15 = value.Substring(0, 15);
             string[] bodyparts = value.Split(' ');
@@ -19,7 +19,7 @@ namespace POCBlogPost
             return newbody;
         }
 
-        internal static string GetFileName(string value)
+        public static string GetFileName(string value)
         {
             string mydocpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             var dateAsString = DateTime.Now.ToString("yyyyMMdd_hhmmss");

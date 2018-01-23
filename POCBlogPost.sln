@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POCBlogPost", "POCBlogPost\POCBlogPost.csproj", "{7B600914-AB0F-4BC3-8851-0A4661AA6873}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POCBlogPost", "POCBlogPost\POCBlogPost.csproj", "{7B600914-AB0F-4BC3-8851-0A4661AA6873}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POCBlogPost.Tests", "POCBlogPost.Tests\POCBlogPost.Tests.csproj", "{F43CE24A-E583-44B5-B627-F897EF75B8CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{7B600914-AB0F-4BC3-8851-0A4661AA6873}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B600914-AB0F-4BC3-8851-0A4661AA6873}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B600914-AB0F-4BC3-8851-0A4661AA6873}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F43CE24A-E583-44B5-B627-F897EF75B8CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F43CE24A-E583-44B5-B627-F897EF75B8CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F43CE24A-E583-44B5-B627-F897EF75B8CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F43CE24A-E583-44B5-B627-F897EF75B8CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
