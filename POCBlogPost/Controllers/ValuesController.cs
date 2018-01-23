@@ -23,7 +23,7 @@ namespace POCBlogPost.Controllers
             var getRepo = Repo.RepositoryAsync(value).Result;
             
             //ignore blog posts with an even id
-            var repository = getRepo.Distinct();
+            var repository = getRepo.GroupBy(s => s.id).Select(s => s.First());
 
             //Serialize the result into a file with the following name: userid_yyyyMMdd_hhmmss.txt
             string FILE_NAME = Rules.GetFileName(value);

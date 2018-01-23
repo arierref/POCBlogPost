@@ -1,4 +1,7 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using Microsoft.EntityFrameworkCore.Internal;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace POCBlogPost.Tests
@@ -50,6 +53,34 @@ namespace POCBlogPost.Tests
 
             //Assert
             Assert.AreEqual(expectedresult, actualresult);
+        }
+
+        [TestMethod]
+        public void Distinct_RemovePostsWithEvenId()
+        {
+            //Arrange
+            var Posts = new List<ListPost>();
+            var count = 0;
+
+            Posts.Add(new ListPost() { id = 1, userId = 1, body = "sdfg sg sd", title = "fasd f" });
+            Posts.Add(new ListPost() { id = 1, userId = 1, body = "sdfg sg sd", title = "fasd f" });
+            Posts.Add(new ListPost() { id = 2, userId = 2, body = "vdfgfgsdf", title = "ffffff" });
+            Posts.Add(new ListPost() { id = 3, userId = 3, body = "sdfg sg sd", title = "fasd f" });
+            Posts.Add(new ListPost() { id = 1, userId = 1, body = "sdfg sg sd", title = "fasd f" });
+            Posts.Add(new ListPost() { id = 4, userId = 1, body = "sdfg sg sd", title = "fasd f" });
+            Posts.Add(new ListPost() { id = 5, userId = 1, body = "sdfg sg sd", title = "fasd f" });
+
+            var distinct = Posts.GroupBy(s => s.id).Select(s => s.First());
+
+            foreach(var x in distinct)  
+            {
+                count++;
+            };
+            
+            //var newPost = Posts;
+
+            //Assert
+            Assert.IsTrue(count==5);
         }
     }
 }
